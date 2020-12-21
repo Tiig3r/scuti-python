@@ -21,6 +21,9 @@ try:
     # Room
     manager.room.load_rooms()
     log.info("Room manager loaded!")
+    # Users
+    manager.user.load_users()
+    log.info("User manager loaded!")
 except Exception as e:
     log.error(str(e))
     exit()

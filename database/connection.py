@@ -21,7 +21,6 @@ class Database:
         """
         self.cursor.execute(sql, data)
         rows = self.cursor.fetchall()
-        self.cursor.close()
         return rows
 
     def insert(self, sql, data):
