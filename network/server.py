@@ -3,6 +3,8 @@ Scuti server
 Author: Tig3r
 """
 from SimpleWebSocketServer import SimpleWebSocketServer, WebSocket
+import scuti
+import util.logging as log
 
 
 class Server(WebSocket):
@@ -11,7 +13,7 @@ class Server(WebSocket):
         self.sendMessage(self.data)
 
     def handleConnected(self):
-        print(self.address, 'connected')
+        log.line(self.address[0] + " is now connected!")
 
     def handleClose(self):
-        print(self.address, 'closed')
+        log.line(self.address[0] + " is disconnected!")

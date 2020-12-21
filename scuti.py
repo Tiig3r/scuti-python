@@ -12,9 +12,9 @@ log.line("#                   #")
 log.line("#   Scuti  Server   #")
 log.line("#                   #")
 log.line("#####################")
-log.line()
-log.line()
 
+
+scuti.clients = {}
 try:
     scuti.db = Database("localhost", "root", "", "scuti")
     log.info("Connected to database!")
@@ -26,5 +26,7 @@ except Exception as e:
     exit()
 
 
-server = SimpleWebSocketServer("", 30000, Server)
+log.line()
+log.info("Server online!")
+server = SimpleWebSocketServer("", 3000, Server)
 server.serveforever()
