@@ -1,6 +1,6 @@
 import util.logging as log
 import communication.incoming.incoming
-from communication.incoming.user.login import UserLoginEvent
+from communication.incoming.user.UserLoginEvent import UserLoginEvent
 
 
 class MessageHandler:
